@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iara Gonçalves ✿ Links</title>
+<meta name="description" content="Criadora UGC — portfólio para marcas, cursos e materiais para creators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --butter:#F2E3A0;
+    --forest:#1B2A21;
+    --forest-2:#24372B;
+    --cream:#F4F1E8;
+    --olive:#8C7A2C;
+    --olive-dark:#6E5F1F;
+    --track:#D9D2BE;
+    --ink:#1E2420;
+    --muted:#5C5F55;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--forest);
+    color:var(--ink);
+    font-family:"DM Sans",system-ui,sans-serif;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- header com borda ondulada ---------- */
+  header{
+    background:var(--butter);
+    position:relative;
+    padding:44px 24px 40px;
+    text-align:center;
+  }
+  header::after{
+    content:"";
+    position:absolute;left:0;right:0;bottom:-14px;height:14px;
+    background:radial-gradient(circle at 14px 0, var(--butter) 13px, transparent 14px) repeat-x;
+    background-size:28px 14px;
+  }
+  header{padding-top:28px}
+  .retrato{
+    position:relative;width:230px;height:250px;margin:0 auto 18px;
+  }
+  /* arco verde atrás da foto */
+  .retrato::before{
+    content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:210px;height:230px;border-radius:105px 105px 0 0;
+    background:var(--forest);
+  }
+  /* florzinha decorativa */
+  .retrato .flor-deco{
+    position:absolute;right:-4px;top:58px;z-index:2;
+    width:42px;height:42px;border-radius:50%;
+    background:var(--cream);color:var(--olive);
+    display:grid;place-items:center;font-size:22px;
+    box-shadow:0 4px 10px rgba(0,0,0,.18);
+  }
+  .retrato img{
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:230px;height:auto;z-index:1;
+    clip-path:inset(-40px 10px 0 10px round 0 0 0 0);
+    filter:drop-shadow(0 6px 10px rgba(0,0,0,.18));
+  }
+  .retrato .base{
+    position:absolute;left:50%;bottom:-3px;transform:translateX(-50%);
+    width:214px;height:6px;border-radius:3px;background:var(--olive);z-index:2;
+  }
+  h1{
+    font-family:"Fraunces",serif;font-weight:600;
+    font-size:30px;color:var(--forest);letter-spacing:-.3px;
+  }
+  h1 .flor{color:var(--olive);font-size:22px;vertical-align:3px;margin-left:4px}
+  .tagline{
+    margin-top:6px;font-size:12px;font-weight:700;
+    letter-spacing:2.4px;text-transform:uppercase;color:var(--forest);
+  }
+  .sub{margin-top:10px;font-size:15px;color:#3b4237;max-width:300px;margin-inline:auto;line-height:1.45}
+
+  /* ---------- abas ---------- */
+  main{max-width:460px;margin:0 auto;padding:44px 18px 40px}
+  .tabs{
+    display:grid;grid-template-columns:1fr 1fr;gap:6px;
+    background:var(--forest-2);padding:6px;border-radius:999px;
+    margin-bottom:26px;
+  }
+  .tabs button{
+    border:0;cursor:pointer;border-radius:999px;padding:12px 8px;
+    font-family:"DM Sans",sans-serif;font-size:12px;font-weight:700;
+    letter-spacing:1.8px;text-transform:uppercase;
+    background:transparent;color:var(--cream);transition:.2s;
+  }
+  .tabs button.ativo{background:var(--butter);color:var(--forest)}
+  .painel{display:none;animation:sobe .35s ease}
+  .painel.ativo{display:block}
+  @keyframes sobe{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .rotulo{
+    color:var(--butter);font-size:12px;font-weight:700;letter-spacing:2.4px;
+    text-transform:uppercase;margin:6px 4px 14px;
+  }
+
+  /* ---------- cards ---------- */
+  .card{
+    background:var(--cream);border-radius:6px;
+    padding:22px 22px;margin-bottom:16px;
+    box-shadow:0 10px 24px rgba(0,0,0,.28);
+    display:block;transition:transform .2s, box-shadow .2s;
+  }
+  a.card:hover{transform:translateY(-2px) rotate(-.3deg);box-shadow:0 14px 28px rgba(0,0,0,.35)}
+  .card .tipo{
+    font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--olive-dark);
+  }
+  .card h2,.card h3{font-family:"Fraunces",serif;font-weight:600;color:var(--ink);line-height:1.15}
+  .card h2{font-size:26px;margin:6px 0 8px}
+  .card h3{font-size:20px;margin:4px 0 6px}
+  .card p{font-size:14.5px;color:var(--muted);line-height:1.5}
+
+  .btn{
+    margin-top:16px;display:flex;align-items:center;justify-content:space-between;
+    background:var(--forest);color:var(--cream);
+    padding:14px 18px;border-radius:999px;
+    font-weight:700;font-size:13px;letter-spacing:1.4px;text-transform:uppercase;
+  }
+  .btn .seta{font-size:18px;transition:transform .2s}
+  a.card:hover .btn .seta{transform:translateX(4px)}
+  .btn.olive{background:var(--olive)}
+
+  /* métricas */
+  .stats{display:grid;grid-template-columns:1fr 1fr;margin:14px 0 4px}
+  .stats div{padding:12px 0;border-bottom:1px dashed #cfc8b4}
+  .stats strong{display:block;font-family:"Fraunces",serif;font-size:26px;font-weight:600}
+  .stats span{font-size:13px;color:var(--muted)}
+  .barra{margin-top:14px}
+  .barra .topo{display:flex;justify-content:space-between;font-size:13.5px}
+  .barra .topo b{font-weight:700}
+  .barra .trilho{height:8px;background:var(--track);border-radius:99px;margin-top:5px;overflow:hidden}
+  .barra .trilho i{display:block;height:100%;background:var(--olive);border-radius:99px}
+
+  /* destaque do curso */
+  .curso{position:relative;border:2px solid var(--butter);outline:6px solid var(--forest);outline-offset:-8px}
+  .selo{
+    position:absolute;top:-12px;right:18px;
+    background:var(--butter);color:var(--forest);
+    font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;
+    padding:6px 12px;border-radius:999px;box-shadow:0 4px 10px rgba(0,0,0,.25);
+  }
+
+  /* ebooks em lista */
+  .ebook{display:flex;gap:16px;align-items:center;padding:18px}
+  .capa{
+    flex:0 0 58px;height:76px;border-radius:3px;
+    background:var(--forest);color:var(--butter);
+    display:grid;place-items:center;
+    font-family:"Fraunces",serif;font-size:22px;font-weight:600;
+    box-shadow:3px 3px 0 var(--olive);
+  }
+  .ebook .info{flex:1}
+  .ebook h3{font-size:17px}
+  .ebook p{font-size:13px}
+  .ebook .ir{font-size:20px;color:var(--olive-dark);transition:transform .2s}
+  a.ebook:hover .ir{transform:translateX(4px)}
+
+  footer{text-align:center;color:#c9c6b8;font-size:13px;padding:10px 20px 40px}
+  footer .flor{color:var(--butter)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="retrato">
+    <img src="iara.png" alt="Foto de Iara Gonçalves">
+    <span class="flor-deco">✿</span>
+    <span class="base"></span>
+  </div>
+  <h1>Iara Gonçalves <span class="flor">✿</span></h1>
+  <p class="tagline">Criadora UGC</p>
+  <p class="sub">Conteúdo que conecta marcas a pessoas — e ensino você a fazer o mesmo.</p>
+</header>
+
+<main>
+  <div class="tabs" role="tablist">
+    <button class="ativo" data-alvo="marcas" role="tab">Para marcas</button>
+    <button data-alvo="creators" role="tab">Para creators</button>
+  </div>
+
+  <!-- ================= MARCAS ================= -->
+  <section class="painel ativo" id="marcas">
+    <p class="rotulo">Vamos criar juntos</p>
+
+    <a class="card" href="https://iaragoncalves00.github.io/-ugc/" target="_blank" rel="noopener">
+      <span class="tipo">Portfólio UGC</span>
+      <h2>Veja meus trabalhos, nichos e métricas</h2>
+      <p>Vídeos, resultados de campanhas e tudo o que sua marca precisa para decidir.</p>
+      <span class="btn">Ver portfólio <span class="seta">→</span></span>
+    </a>
+
+    <div class="card">
+      <span class="tipo">Quem me assiste</span>
+      <div class="stats">
+        <div><strong>21 mil</strong><span>reposts</span></div>
+        <div><strong>13 mil</strong><span>salvamentos</span></div>
+        <div><strong>57,2 mil</strong><span>curtidas</span></div>
+        <div><strong>126</strong><span>reels no período</span></div>
+      </div>
+      <div class="barra">
+        <div class="topo"><span>Mulheres</span><b>87,5%</b></div>
+        <div class="trilho"><i style="width:87.5%"></i></div>
+      </div>
+      <div class="barra">
+        <div class="topo"><span>25 a 34 anos</span><b>36,7%</b></div>
+        <div class="trilho"><i style="width:36.7%"></i></div>
+      </div>
+      <div class="barra">
+        <div class="topo"><span>Brasil</span><b>96,3%</b></div>
+        <div class="trilho"><i style="width:96.3%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CREATORS ================= -->
+  <section class="painel" id="creators">
+    <p class="rotulo">Curso</p>
+
+    <a class="card curso" href="https://pay.hotmart.com/F108202466B?off=1s5bst0y&checkoutMode=10" target="_blank" rel="noopener">
+      <span class="selo">Mais procurado</span>
+      <span class="tipo">Curso completo</span>
+      <h2>Destrave o UGC em 7 dias</h2>
+      <p>O passo a passo para sair do zero e começar a fechar parcerias como criadora UGC.</p>
+      <span class="btn olive">Quero destravar <span class="seta">→</span></span>
+    </a>
+
+    <p class="rotulo">E-books</p>
+
+    <a class="card ebook" href="https://go.hotmart.com/E108252169U?dp=1" target="_blank" rel="noopener">
+      <span class="capa">7</span>
+      <span class="info">
+        <span class="tipo">E-book</span>
+        <h3>Desafio 7 Dias — Sua Primeira Oportunidade UGC</h3>
+        <p>Um desafio prático para conquistar o primeiro job.</p>
+      </span>
+      <span class="ir">→</span>
+    </a>
+
+    <a class="card ebook" href="https://go.hotmart.com/B108252479U?dp=1" target="_blank" rel="noopener">
+      <span class="capa">2ª</span>
+      <span class="info">
+        <span class="tipo">E-book</span>
+        <h3>Kit Segunda Campanha</h3>
+        <p>Transforme o primeiro job em cliente recorrente.</p>
+      </span>
+      <span class="ir">→</span>
+    </a>
+
+    <a class="card ebook" href="https://go.hotmart.com/V108252332A?dp=1" target="_blank" rel="noopener">
+      <span class="capa">“ ”</span>
+      <span class="info">
+        <span class="tipo">E-book</span>
+        <h3>Respostas que Fecham</h3>
+        <p>Mensagens prontas para responder marcas e fechar parcerias.</p>
+      </span>
+      <span class="ir">→</span>
+    </a>
+  </section>
+</main>
+
+<footer>Feito com carinho <span class="flor">✿</span> Iara Gonçalves</footer>
+
+<script>
+  const botoes = document.querySelectorAll('.tabs button');
+  function abrir(alvo){
+    botoes.forEach(b => b.classList.toggle('ativo', b.dataset.alvo === alvo));
+    document.querySelectorAll('.painel').forEach(p => p.classList.toggle('ativo', p.id === alvo));
+  }
+  botoes.forEach(b => b.addEventListener('click', () => {
+    abrir(b.dataset.alvo);
+    history.replaceState(null, '', '#' + b.dataset.alvo);
+  }));
+  // link direto: .../#creators abre já na aba de creators
+  if (location.hash === '#creators') abrir('creators');
+</script>
+</body>
+</html>
